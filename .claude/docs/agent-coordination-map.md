@@ -9,8 +9,8 @@
                  |               |               |
          creative-director  technical-director  producer
                  |               |               |
-        +--------+--------+     |        (coordinates all)
-        |        |        |     |
+        +--------+--------+      |        (coordinates all)
+        |        |        |      |
   game-designer art-dir  narr-dir  lead-programmer  qa-lead  audio-dir
         |        |        |         |                |        |
      +--+--+     |     +--+--+  +--+--+--+--+--+   |        |
@@ -20,6 +20,14 @@
                              +---+---+
                              |       |
                           perf-a   devops   analytics
+
+  Pipeline Integrity (reports to technical-director):
+    command-pipeline-guardian   -- Event bus, command priority, loop prevention,
+                                   state machine consistency
+
+  Feel Review Management (reports to producer):
+    aesthetic-reviewer          -- Sprint-end feel review batching, level rationale
+                                   approval queue, rejected review routing
 
   Additional Leads (report to producer/directors):
     release-manager         -- Release pipeline, versioning, deployment
@@ -84,6 +92,8 @@ art-dir = art-director
 | accessibility-specialist | ux-designer (accessible patterns), ui-programmer (implementation), qa-tester (a11y testing) |
 | [engine]-specialist | engine sub-specialists (delegates subsystem-specific work) |
 | [engine] sub-specialists | (advises all programmers on engine subsystem patterns and optimization) |
+| command-pipeline-guardian | (reviews all new commands/events before implementation; approves or rejects pipeline requests) |
+| aesthetic-reviewer | (batches feel reviews each sprint; routes rejected reviews to rework tasks; manages level rationale queue) |
 | live-ops-designer | economy-designer (live economy), community-manager (event comms), analytics-engineer (engagement metrics) |
 | community-manager | (works with producer for approval, release-manager for patch note timing) |
 
@@ -101,6 +111,10 @@ art-dir = art-director
 | Scope exceeds capacity | producer, then creative-director for cuts |
 | Quality gate disagreement | qa-lead, then technical-director |
 | Performance budget violation | performance-analyst flags, technical-director decides |
+| Command pipeline priority conflict | command-pipeline-guardian, then technical-director |
+| Infinite trigger loop risk | command-pipeline-guardian escalates to technical-director immediately |
+| Feel review rejected, agent disputes feedback | producer facilitates; human decision is final |
+| New decision contradicts decision-log entry | technical-director (technical) or creative-director (design) |
 
 ## Common Workflow Patterns
 

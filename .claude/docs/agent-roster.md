@@ -11,6 +11,8 @@ domain lead) should delegate to specialists.
 | `creative-director` | High-level vision | Major creative decisions, pillar conflicts, tone/direction |
 | `technical-director` | Technical vision | Architecture decisions, tech stack choices, performance strategy |
 | `producer` | Production management | Sprint planning, milestone tracking, risk management, coordination |
+| `command-pipeline-guardian` | Event/command bus integrity | Any new command, event, trigger, modifier, or effect-stacking logic |
+| `command-pipeline-guardian` | Event/command bus integrity | Any new command, event, trigger, modifier, or effect-stacking logic |
 
 ## Tier 2 -- Department Lead Agents (Sonnet)
 | Agent | Domain | When to Use |
@@ -50,6 +52,7 @@ domain lead) should delegate to specialists.
 | `accessibility-specialist` | Accessibility | Haiku | WCAG compliance, colorblind modes, remapping, text scaling |
 | `live-ops-designer` | Live operations | Sonnet | Seasons, events, battle passes, retention, live economy |
 | `community-manager` | Community | Haiku | Patch notes, player feedback, crisis comms, community health |
+| `aesthetic-reviewer` | Feel review management | Sonnet | Sprint-end feel review batching, level rationale reviews, rejected review routing |
 
 ## Engine-Specific Agents (use the set matching your engine)
 
